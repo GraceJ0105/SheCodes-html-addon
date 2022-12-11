@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Class Manipulation</title>
+
+    <style>
+      button {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin: 100px;
+      }
+      .dark-theme-button {
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+      }
+
+      .dark-theme-body {
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Dark Theme</button>
+  </body>
+
+  <script>
+    function makeItDark() {
+      let darkThemeBody = document.querySelector("body");
+      darkThemeBody.classList.add("dark-theme-body");
+      let darkThemeButton = document.querySelector("button");
+      darkThemeButton.classList.add("dark-theme-button");
+    }
+
+    let button = document.querySelector("button");
+    button.addEventListener("click", makeItDark);
+  </script>
+</html>
